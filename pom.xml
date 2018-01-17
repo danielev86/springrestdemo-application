@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.firm.restdemo</groupId>
+  <artifactId>restdemo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>restdemo</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	<maven.compiler>1.8</maven.compiler>
+  	<spring.version>4.3.0.RELEASE</spring.version>
+  	<log4j.version>1.2.17</log4j.version>
+  	<commons.lang.version>3.7</commons.lang.version>
+  	<commons.collection.version>4.1</commons.collection.version>
+  	<commons.beanutils.version>1.9.3</commons.beanutils.version>
+  </properties>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+  			<artifactId>maven-plugin-archive</artifactId>
+  			<version>3.6.2</version>
+  			<configuration>
+  				<source>${maven.compiler}</source>
+  				<target>${maven.compiler}</target>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>${log4j.version}</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>${commons.lang.version}</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-collections4</artifactId>
+	    <version>${commons.collection.version}</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+	<dependency>
+	    <groupId>commons-beanutils</groupId>
+	    <artifactId>commons-beanutils</artifactId>
+	    <version>${commons.beanutils.version}</version>
+	</dependency>
+		
+		
+	
+	
+    
+  </dependencies>
+
+  <modules>
+    <module>restdemo-backend</module>
+    <module>restdemo-service</module>
+  </modules>
+</project>
